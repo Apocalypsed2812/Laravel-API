@@ -15,14 +15,19 @@ use App\Http\Middleware;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/',  function(){
+    return view('welcome');
+});
+
+Route::get('/register',  function(){
+    return view('register');
+});
+
+Route::get('/login',  function(){
+    return view('login');
+});
 
 Route::get('/logout',  [AuthController::class, 'logout'])->name('logout');
-
-Route::get('/logout',  [AuthController::class, 'logout'])->name('logout');
-
-Route::post('/register', [AuthController::class, 'register'])->name('register');
-
-Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 Route::post('/otp', [AuthController::class, 'checkOTP']);
 
@@ -43,5 +48,3 @@ Route::prefix('admin')->group(function(){
     Route::get('get-user-by-id', [AdminController::class, 'getUserById'])->name('getUserById');
 });
 
-// Test API
-Route::post('/api', [AuthController::class, 'api']);

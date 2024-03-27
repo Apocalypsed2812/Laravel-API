@@ -10,8 +10,9 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
-        "twilio/sdk": "^7.13",
-        "pear/http_request2": "^2.4"
+        "pear/http_request2": "^2.4",
+        "spomky-labs/otphp": "^11.2",
+        "twilio/sdk": "^7.13"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
